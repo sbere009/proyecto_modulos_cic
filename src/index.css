@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cic-orange: #E65100;
+  --cic-blue: #0288D1;
+  --cic-yellow: #FBC02D;
+  --cic-green: #4CAF50;
+  --cic-dark: #1E293B;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  @apply bg-slate-100 font-sans;
+}
+
+@layer components {
+  .btn-cic-primary {
+    @apply bg-orange-600 text-white transition-colors duration-200 hover:bg-orange-800;
+  }
+}
+
+@media print {
+  .no-print { display: none !important; }
+  body { background: white; color: black; }
+}
